@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option go_package="ordering-microservice/protogen/golang/product";
+
+enum ProductType{
+    UNKNOWN = 0;
+    FOOD = 1;
+    DRINK=2;
+}
+
+message Product {
+    uint64 id = 1 [ json_name = "id" ];
+    string name=2 [ json_name = "name" ];
+    ProductType product_type=3 [ json_name = "product_type" ];
+}
